@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping mall</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="total">
+        
+        <div class="navbar-section">
+            <div class="left"><img src="img/keyboard.png">
+                <p class="me">Divya</p>
+                </div>
+                <div class="mid">
+                    <div class="navbar"><ul>
+                    <li><a href="#home" target="_self">Home</a></li>
+                    <li><a href="#about" target="_self">About</a></li>
+                    <li><a href="#contact" target="_self">Contact </a></li>
+                    <li><a href="#payment" target="_self">Payment</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="button">
+                        <button class="btn1"><a href="reg.html">register</a></button>
+                        <button class="btn2"><a href="login.html">login</a></button>
+                    </div>
+                </div>
+                
+        </div>
+            
+            <div class="Home-section" id="home">
+                
+                <h2>Our services</h2>
+                
+                <p class="primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. At repudiandae harum accusantium eos impedit quasi minus sapiente ex architecto, magni, omnis inventore velit dolor illum enim ducimus? Soluta, harum cumque?</p>
+                <button class="button2"><a href="#">order now</a></button>
+                <marquee id="divya">
+                DIVYA SHOPPING MALL
+                </marquee>
+                
+                
+            
+            </div>
+            
+            <div class="about-section" id="about">
+                <h2>About Us</h2>  
+                <div class="boxes">
+                <div class="box" id="box-1">
+                    <img src="img/saree.jpg" id="saree">
+                    <h3 class="h3">saree</h3>
+                    <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolorem deserunt, delectus ad facilis magnam nobis labore id veniam voluptatum eligendi hic unde soluta ut accusamus necessitatibus velit ab molestias?</p>
+                </div>
+                <div class="box" id="box-2"><img src="img/dress.jpg" id="dress">
+                    <h3 class="h3">dress</h3>
+                    <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolorem deserunt, delectus ad facilis magnam nobis labore id veniam voluptatum eligendi hic unde soluta ut accusamus necessitatibus velit ab molestias?</p></div>
+                <div class="box" id="box-3"><img src="img/jeans.jpg" id="jeans">
+                    <h3 class="h3">jeans</h3>
+                    <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolorem deserunt, delectus ad facilis magnam nobis labore id veniam voluptatum eligendi hic unde soluta ut accusamus necessitatibus velit ab molestias?</p></div></div>
+        
+        </div>
+        
+
+        <div class="contact-section" id="contact"><h2>Contact Us</h2>
+            <div class="contact1">
+            
+            
+            <div class="mall">
+            <form action="" id="form">
+                <div class="input-name"><label>Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" required="" id="name" class="input"></div>
+                <div class="input-name"><label>password</label>&nbsp;&nbsp;
+                <input type="password" required="" id="password" class="input"></div>
+                <div class="input-name"><label>Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="email" required="" id="email" class="input"></div>
+                <div class="input-name">
+                <label>Number</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" required="" id="number" class="input"></div>
+                <button class="button1">Submit</button>
+                <a href="https://wa.me/8096166531" class="msg">msg me</a>
+                
+            </form>
+        </div>
+        <video src="img/apparel_-_30703 (540p).mp4" autoplay muted loop plays-inline></video>
+        </div>
+        </div>
+        
+        <div class="Payment-section" id="payment">
+            <h2>Payment</h2>
+            <div class="payment-select">
+            <label for="payment">Payment-mode</label>
+            <form action="" onsubmit="">
+            <select id="payment-mode" required onchange="showImage">
+                
+                
+                    <option value="none">None</option>
+                    <option value="online">Online Payment</option>
+                    <option value="offline">offline Payment</option>
+                    
+            </select></form>
+            <button type="button" class="button1" onclick="onSubmit()"  id="btn-Id">Submit</button>
+            <img id="paymentImage" style="display: none;" src="" alt="Payment Image" height="200px" width="200px">
+            
+        </div>   </div>
+        <div class="footer">
+            <img src="img/YouTube-icon.png" id="youtube">
+            <img src="img/wtsapp.png" id="wtsapp">
+            <img src="img/gmail_5968534.png" id="gmail">
+            <p>All &copy copy rights reserved</p>
+
+        </div>
+        <script>
+            function showImage(){
+                var selectedValue=document.getElementById("payment-mode").value;
+                var image=document.getElementById("paymentImage");
+                if(selectedValue=="online"){
+                    image.src="img/phonepe1.png";
+                    image.style.display="block";
+
+                }
+                else{
+                    image.style.display="none";
+                }
+            }
+            function onSubmit(){
+                var selectedValue=document.getElementById("payment-mode").value;
+                if(selectedValue==="none"){
+                    alert("please select payment mode");
+                }
+                else if(selectedValue==="online"){
+                    showImage();
+                }
+                else{
+                    confirm("are you selected offline mode")
+
+                }
+                }
+            
+        </script>
+
+</div> 
+</body>
+</html>
